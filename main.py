@@ -1,17 +1,4 @@
-# ------------------------- [ Main Project File | Coding: utf-8 ] ------------------------- #
-# Project: AsciCam                                                                          #
-# File: main.py                                                                             #
-# Python Version: 3.10.2 - Tested: 3.10.2 - All others are untested.                        #
-# The libraries should get installed among the integrated libraries: cv2, pillow            #
-# ----------------------------------------- [ ! ] ----------------------------------------- #
-# This code doesn't have any errors. if you got an error, check syntax and python version.  #
-# ----------------------------------------- [ ! ] ----------------------------------------- #
-# Author: nihadenes - <nihadenesvideo@gmail.com>                                            #
-# Links: <https://github.com/nihadenes>                                                     #
-# Date: 3/28/2022                                                                           #
-# License: MIT License                                                                      #
-# --------------------------------------- [ Enjoy ] --------------------------------------- #
-
+from random import choice
 import cv2, os
 from PIL import Image
 
@@ -79,7 +66,26 @@ def print_large_block(text):
 
 
 def get_ascii_from_image(im):
-    global char_list, mirrored
+    global mirrored
+    char_list = "".join([' ',
+    choice([".", "-", "_", "|"]),
+    choice(["'", '"', "*", "+"]), 
+    choice([",", 'z', "Y", "I"]), 
+    choice([":", '?', "!", "@"]),
+    choice(["#", '^', "=", ";"]),
+    choice(["T", 'r', "S", "c"]),
+    choice(["J", 'q', "G", "I"]),
+    choice(["a", '~', "X", "x"]), 
+    choice(["M", '/', "7", "~"]), 
+    choice(["j", 'p', "b", "y"]),
+    choice(["{", '}', "(", ")"]),
+    choice(["d", 'D', "l", "8"]),
+    choice(["O", 'o', "0", "9"]),
+    choice(["R", 't', "U", "W"]),
+    choice(["L", 'k', "A", "6"]),
+    choice(["1", '3', "n", "N"]),])
+
+    
     lines = []
     x_range = range(im.size[0])[::-1] if mirrored else range(im.size[0])
     for y in range(im.size[1]):
@@ -122,7 +128,10 @@ def print_ascii_from_im(im):
 
 
 def main():
+    print("\033[92m Matrix is Real")
     [print_ascii_from_im(im) for im in get_video_frms(camera, 'PIL')]
+    print("\033[92m Matrix is Real")
+
 
 
 if __name__ == '__main__':
@@ -132,7 +141,7 @@ if __name__ == '__main__':
     fontsize = 1  # 3 is buggy, so don't use 3.
 
     set_screen = 0     
-    char_list = "".join([' ', '.', "'", ',', ':', ';', 'c', 'l', 'x', 'o', 'k', 'X', 'd', 'O', '0', 'K', 'N'])
+    char_list = "".join([' ', choice([".", "-", "_", "M"]), "'", ',', ':', ';', 'c', 'l', 'x', 'o', 'k', 'X', 'd', 'O', '0', 'K', 'N'])
 
     try:
         changeFontSize(size=fontsize)
