@@ -1,6 +1,8 @@
 ## MatrixCam
 
 This repository Forked From [AsciCam](https://github.com/nihadenes/AsciCam)
+this idea for nihadenes <nihadenesvideo@gmail.com>.
+i can not find it account in github yet! i hope to be it good
 
 
 ## Getting Started.
