@@ -1,22 +1,22 @@
-## AsciCam.
+## MatrixCam
 
-AsciCam is a program that converts your camera input into ascii while the pogram is open.
+This repository Forked From [AsciCam](https://github.com/nihadenes/AsciCam)
 
 
 ## Getting Started.
 
-### Install Requirements
-
+First You can install requirments like this:
 ```
 pip install -r requirements.txt
 ```
-
 Now that's it! You should be able to run the code.
+
+*THESE PICTURES IS FOR ORIGINAL VERSION (AsciCam) 
 
 ![Screenshot_1](https://user-images.githubusercontent.com/91975592/179146361-3cb72e3b-310b-41e4-a452-8483eb5eb30e.png)
 
-
 ![Screenshot_3](https://user-images.githubusercontent.com/91975592/179146595-7679749c-0ac8-41b3-b051-3bd611d51082.png)
+
 
 (Shot via program with Logitech C525)
 
